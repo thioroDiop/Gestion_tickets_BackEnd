@@ -29,8 +29,9 @@ public class TicketDao implements Dao<Ticket> {
     }
 
     @Override
-    public void save(Ticket ticket) {
+    public Ticket save(Ticket ticket) {
         // A vous de jouer
+        return ticket;
     }
 
     @Override

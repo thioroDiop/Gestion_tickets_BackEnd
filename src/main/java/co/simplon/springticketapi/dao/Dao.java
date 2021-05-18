@@ -24,7 +24,7 @@ public interface Dao<T> {
      *
      * @param t l'objet à sauvegarder (à créer ou mettre à jour).
      */
-    void save(T t);
+    T save(T t);
 
     /**
      * Fonction de suppression d'un objet en base de données.
