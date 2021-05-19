@@ -34,7 +34,7 @@ public class TicketController {
     @PutMapping("/{id}")
     public Ticket updateTicket(@PathVariable Long id, @RequestBody Ticket ticket) {
         if (ticket.getId().equals(id))
-            return ticketDao.updateTicketStatus(ticket);
+            return ticketDao.updateTicketStatus(ticket, id);
         else
             return null;
     }

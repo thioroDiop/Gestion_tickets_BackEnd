@@ -58,8 +58,8 @@ public class TicketDao implements Dao<Ticket> {
         return ticket;
     }
 
-    public Ticket updateTicketStatus(Ticket ticket) {
-        jdbcTemplate.update("UPDATE ticket set is_solved = ?", ticket.isSolved());
+    public Ticket updateTicketStatus(Ticket ticket, Long id) {
+        jdbcTemplate.update("UPDATE ticket set is_solved = ? where id = ?", ticket.isSolved(), id);
         return ticket;
     }
 
