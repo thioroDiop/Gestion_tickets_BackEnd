@@ -8,6 +8,7 @@ import java.util.List;
 
 @RequestMapping("/api/classrooms")
 @RestController
+@CrossOrigin(origins = "*")
 public class ClassroomController {
 
     private ClassroomDao classroomDao;

@@ -31,7 +31,7 @@ public class TicketDao implements Dao<Ticket> {
 
     @Override
     public List<Ticket> getAll() {
-        return jdbcTemplate.query("select * from ticket", ticketRowMapper);
+        return jdbcTemplate.query("select * from ticket order by id ", ticketRowMapper);
     }
 
     @Override
